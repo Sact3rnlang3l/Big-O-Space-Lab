@@ -176,19 +176,18 @@ function countLetters(str) {
     y: 0,
     z: 0,
   }
-
-  str = str.toLowerCase()
-  const splitStr = str.split("")
-
-  splitStr.forEach((char) => {
-    if (letters.hasOwnProperty(char)) {
-      letters[char]++
-    }
-  })
-
-  return letters
 }
 
+str = str.toLowerCase()
+const splitStr = str.split("")
+
+splitStr.forEach((char) => {
+  if (letters.hasOwnProperty(char)) {
+    letters[char]++
+  }
+
+  return letters
+})
 /////////////////////////////
 
 function countLettersRoundTwo(str) {
@@ -253,15 +252,16 @@ class Factorial {
     this.cache = {}
   }
   calc_fac(num) {
-    if (num === 0 || num === 1){
-      return 1;
-      } else {
-    for (var i = num - 1; i >= 1; i--) {
-      num *= i;
+    if (num === 0 || num === 1) {
+      return 1
+    } else {
+      for (var i = num - 1; i >= 1; i--) {
+        num *= i
+      }
+      return num
     }
-    return num;
   }
-
+}
 /* 
   We want to test a non-memoized version of this too, 
   so copy and paster your calcFac function and save it 
@@ -271,17 +271,16 @@ class Factorial {
 */
 
 // function noCacheCalcFac(num) {
-function  no_cache_calc_fac(num) {
-    if (num === 0 || num === 1){
-      return 1;
-      } else {
+function no_cache_calc_fac(num) {
+  if (num === 0 || num === 1) {
+    return 1
+  } else {
     for (var i = num - 1; i >= 1; i--) {
-      num *= i;
+      num *= i
     }
-    return num;
+    return num
   }
 }
-
 
 /*
   The logs below will show you how long these functions
